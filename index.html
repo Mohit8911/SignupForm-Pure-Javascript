@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link type="text/css" rel="stylesheet" href="style.css" />
+    <!-- <link type="text/css" rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@10">
+    <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/sweetalert2@7.12.15/dist/sweetalert2.min.css'> -->
+     <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@10"> -->
+    <title>Form</title>
+  </head>
+  <body>
+      <div id="container1">
+        <button onclick="fireSwal()">Add Entry</button>
+      </div>
+    
+     <div id="container2">
+      <table style="width: 100%" id="tableContent">
+        <!-- <table id="tableContent"> -->
+        <tr>
+          <th>Name</th>
+          <th>Email</th>
+          <th>Gender</th>
+          <th>Age</th>
+          <th>Ph No.</th>
+          <th>Start Date</th>
+          <th>End Date</th>
+          <th>
+            <button onclick="handleDelete()" id="deleteButton" style="background-color: rgb(249, 78, 78);">Delete</button>
+          </th>
+          <th>
+            <button onclick="handleDeleteAll()" id="deleteButton2" style="background-color: rgb(249, 78, 78);">DeleteAll</button>
+          </th>
+        </tr>
+        <tr>
+          <th><input type="search" id="nameFilter" onkeyup="filterData()" placeholder="&#128269;Search Name"></th>
+          <th><input type="search" id="emailFilter" onkeyup="filterData()" placeholder="&#128269;Search Email"></th>
+          <th>
+              <select name="genderFilter" id="genderFilter" onchange="filterData()" >
+                <option value="">Any</option>
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+              </select>
+          </th>
+          <th><input type="number" id="ageFilter"placeholder="&#128269;Search Age" onkeyup="filterData()" max="120"></th>
+          <th><input type="search" id="numberFilter"placeholder="&#128269;Search PhNo." onkeyup="filterData()" ></th>
+          <th><input type="date" id="sDateFilter" onchange="filterData()" ></th>
+          <th><input type="date" id="eDateFilter" onchange="filterData()" ></th>
+          <th></th>
+          <th></th>
+        </tr>
+        <tbody id="tableBody">
+        </tbody>
+      </table>
+    </div>
+    <script type="text/javascript" src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script> 
+    
+  </body>
+</html>
